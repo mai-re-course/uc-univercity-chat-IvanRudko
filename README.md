@@ -1,24 +1,40 @@
-# uc-univercity-chat-IvanRudko
-uc-univercity-chat-IvanRudko created by GitHub Classroom
+# Сценарий реализации пользовательского требования: пользователь кликает на изображение и получает скидку на корзину в размере 5%
 
-1-st option is replenished mode before planning
+Требования должны содержать ответы на все возможные вопросы по задаче.
+
+Функциональные требования, как правило, состоят из:
 ***
-* If ( StockingPointPeriod.ReplenishedInventoryLevel() - StockingPointPeriod.InventoryMaxQuantity() ) > MaterialPlanning.InventoryTargetThreshold() ) and element.InventoryMaxQuantity() <> 0 - above max condition (we don’t take zero InventoryMaxQuantity into account, because when we don’t have information about inventory max quantity there are no violations) => StockingPointPeriod node will have red or dark red color, depends on HasActiveInventoryMax = true/false
-* If StockingPointPeriod.ReplanishedInventoryLevel() < 0 => StockingPointPeriod node will have red or dark red color, depends on HasActiveInventoryMax = true/false
+* User story — показывает, чего вы ожидаете от команды разработки
+* Use cases — показывают сценарии использования фичи 
+* Wireframes — средство визуализации своей идеи 
 ***
-2-nd option is replenished mode after planning
+В рамках сценарий я обращу внимание на user story и use cases
 ***
-* If ( StockingPointPeriod.PlannedInventoryLevel() - StockingPointPeriod.InventoryMaxQuantity() ) >               CapacityPlanning.InventoryTargetThreshold() ) and element.InventoryMaxQuantity() <> 0 - above max condition (we don’t take zero InventoryMaxQuantity into account, because when we don’t have information about inventory max quantity there are no violations) => StockingPointPeriod node will have red or dark red color, depends on HasActiveInventoryMax = true/false
-* If StockingPointPeriod.PlannedInventoryLevel() < 0 => StockingPointPeriod node will have red or dark red color, depends on  HasActiveInventoryMax = true/false
-  ***
-Test cases
+User story описывает, что делает пользователь определенной роли для достижения результата, и что нужно сделать разработчику, чтобы воплотить эту задачу в жизнь.
 ***
-1) Change in matrix InventoryTargetSettingsSP Enabled value for stocking point that has any violations
-( belowmin or abovemax )
-2) Check if color of the GC node was changed according to color legend
+1. Название роли: Email-маркетолог
 ***
-1) Change StockingPointPeriod.PlannedInventoryLevel() value for after planning mode to get into range belowmin or abovemax
-2) Check if GC StockingPointPeriod node colors according to color legend
+2. Цель, Действие: Сделать "горячую" кнопку в виде кликабельного изображения для получения пользователями предложения на скидку в размере 5% после их действия - клика 
 ***
-1) Change StockingPointPeriod.ReplenishedInventoryLevel() value for before planning mode to get into range belowmin or abovemax
-2) Check if GC StockingPointPeriod node colors according to color legend
+3. Ожидаемый результат: Я получаю больше клиентов, заинтересованных в покупке товара в моем магазине
+***
+4. Что нужно сделать разработчику: Разработать маршрут при предоставлении пользователю скидки
+***
+Благодаря такой визуализации взаимодействия задача пользователя плавно и логично переходит в задачу для разработчиков. Затем наступает очередь use case’ов.
+***
+Цель: удержать пользователя в интернет-магазине путем предоставления скидки на корзину в размере 5%
+***
+Задачи
+* Привлечь внимание пользователя, сделать очевидным факт клика на картинку - Добавить под картинку текст: "Кликни на меня", по типу табличек на бутылках из сказки "Алиса в стране чудес" :)
+* Вставить действие - выскакивающий текст, предлагающий пользователю актуальный промокод на 5%
+* Предусмотреть закрытие "специального предложения" с помощью клика на поле сайта, вне рамок "специального предложения".
+***
+Для каждой задачи нужно написать свой use case — описание того, как пользователь взаимодействует с интерфейсом.
+* Привлечь внимание пользователя
++ * Пользователь закодит в корзину -> Видит изображение, предлагающее воспользоваться специальным предложением -> Видит текст "Кликни на меня" -> Кликает
+* Вставить действие
++ * Пользователь видит уведомление об специальном предложение, которое предлагает скидку на всю корзину в размере 5% -> Пользователь нажимают на клавишу "скопировать текст промокода" -> В буфере обмена Пользователя появляется промокод
+* Закрыть "Специальное предложение"
++ * Пользователь кликает на область вне рамок "специального предложение" -> Пользователь возвращается в коризну, где может вставить текст промокода в нужную строку - > или стоимость покупки пользователя уменьшается на размер скидки, или текст ограничения применения скидки к его корзине
+***
+Таким же образом расписываются все сценарии использования, что дает разработке четкое понимание, как выглядит взаимодействие пользователя с продуктом или фичей, и что для этого нужно сделать.
