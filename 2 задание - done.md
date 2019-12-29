@@ -30,6 +30,6 @@
 1. Пустой запрос
 2. Неверно введен запрос
 
-![Activity diagram](https://github.com/mai-re-course/uc-univercity-chat-IvanRudko/blob/master/ActivityDiagram.png)
+![Activity diagram](https://github.com/mai-re-course/uc-univercity-chat-IvanRudko/blob/master/ActivityDiagram11.png)
 ![Sequence diagram](https://github.com/mai-re-course/uc-univercity-chat-IvanRudko/blob/master/SequenceDiagram.png)
 ![Component diagram](https://github.com/mai-re-course/uc-univercity-chat-IvanRudko/blob/master/ComponentDiagram.png)
